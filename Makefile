@@ -11,13 +11,11 @@ SRCPDB = $(SRCDIR)/PDB.cc \
 OBJ_PDB = $(patsubst $(SRCDIR)/%, $(BUILDDIR)/%, $(SRCPDB:.cc=.o))
 
 SRCDFIRE = $(SRCDIR)/dfire_calculator.cc \
-           $(SRCDIR)/dfire_dihedral.cc \
-           $(SRCDIR)/dfire_dipolar.cc \
            $(SRCDIR)/dfire_PDB.cc 
 OBJ_DFIRE = $(patsubst $(SRCDIR)/%, $(BUILDDIR)/%, $(SRCDFIRE:.cc=.o))
 
 CFLAGS = -std=c++11 -fopenmp# -g -pg
-LDFLAGS = -L/home/tc/tools/boost/lib -Llib -fopenmp
+LDFLAGS = -Llib -fopenmp
 
 LIB = -ldl 
 
@@ -36,12 +34,14 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.cc $(INCDIR)/%.h
 .PHONY: clean
 clean:
 	@echo " Cleaning..."
-	rm -rf $(BUILDDIR) $(TARGET) bin/tester
+	rm -rf $(BUILDDIR) $(BINDIR)
 
 # For training
 train: $(OBJ_PDB) $(OBJ_DFIRE) src/train.cc
+	@mkdir -p $(BINDIR)
 	$(GCC) $^ $(CFLAGS) $(INC) -static $(LIB) $(LDFLAGS)  -o bin/train
 
 # get fasta sequences from PDB
 getseq: $(OBJ_PDB) src/getseq.cc
+	@mkdir -p $(BINDIR)
 	$(GCC) $^ $(CFLAGS)  $(INC)  $(LIB) $(LDFLAGS)  -o bin/getseq
