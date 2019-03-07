@@ -6,12 +6,6 @@ BINDIR = bin
 INCDIR = include
 TARGET = $(BINDIR)/DFIRE_RNA
 
-# ROOT_BOOST = /project/aspen/TC/tools/boost/boost_1_67_0
-
-
-# SRCEXT = cc
-# SOURCES = $(shell find $(SRCDIR) -type f -name "*.$(SRCEXT)")
-
 SRCPDB = $(SRCDIR)/PDB.cc \
          $(SRCDIR)/pdb_utils.cc
 OBJ_PDB = $(patsubst $(SRCDIR)/%, $(BUILDDIR)/%, $(SRCPDB:.cc=.o))
@@ -44,13 +38,10 @@ clean:
 	@echo " Cleaning..."
 	rm -rf $(BUILDDIR) $(TARGET) bin/tester
 
-# Tests
-
-# tester: $(OBJ_PDB) $(OBJ_DFIRE) src/tester.cc
-# 	$(GCC) $^ $(CFLAGS) $(INC) -static $(LIB) $(LDFLAGS)  -o bin/tester
-
+# For training
 train: $(OBJ_PDB) $(OBJ_DFIRE) src/train.cc
 	$(GCC) $^ $(CFLAGS) $(INC) -static $(LIB) $(LDFLAGS)  -o bin/train
 
+# get fasta sequences from PDB
 getseq: $(OBJ_PDB) src/getseq.cc
 	$(GCC) $^ $(CFLAGS)  $(INC)  $(LIB) $(LDFLAGS)  -o bin/getseq

@@ -9,3 +9,5 @@ export DFIRE_RNA_HOME=${DFIRE_RNA_HOME}
 EOF
         source ${user_home}/.bashrc
 fi
+
+make 

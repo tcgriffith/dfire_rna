@@ -1,6 +1,20 @@
-i
-c++ framework from [this blog](https://hiltmon.com/blog/2013/07/03/a-simple-c-plus-plus-project-structure/)
 
-# work in progress
 
- dfire energy for RNA
+# DFIRE-RNA
+
+Knowledge-based statistical energy based on DFIRE reference state.
+
+# Install
+
+## Linux
+
+```
+cd dfire_rna
+./install.sh
+```
+
+# Usage
+
+```
+
+```
