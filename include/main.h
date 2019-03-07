@@ -2,8 +2,8 @@
 // #include "PDB.h"
 #include "dfire_PDB.h"
 #include "dfire_calculator.h"
-#include "dfire_dihedral.h"
-#include "dfire_dipolar.h"
+//#include "dfire_dihedral.h"
+//#include "dfire_dipolar.h"
 #include <iostream>
 #include <fstream>
 #include <cstdio>
