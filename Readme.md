@@ -6,30 +6,35 @@ Knowledge-based statistical energy based on DFIRE reference state.
 
 # Install
 
-## Linux
-
 Use cmake
 
 ```
+# cmake stuff
+
 mkdir build
 cd build
 cmake ..
 make
+
+# set DFIRE_RNA_HOME in .bashrc (source it or reopen the terminal)
+./install.sh
+
 ```
 
+## Linux
 
-or use make
+Use Makefile (use gcc compiler):
 
 ```
-# This bash script writes DFIRE_RNA_HOME to the .bashrc and calls make
-# re-open terminal to get .bashrc sourced
+make
+# set DFIRE_RNA_HOME in .bashrc (source it or reopen the terminal)
 ./install.sh
 ```
 
 # Usage
 
 ```
-# run dfire_rna witout parameters
+# run dfire_rna without parameters
 
 #######################################################
 # Calculate dfire_rna score for a pdb or a list of pdbs
@@ -58,3 +63,4 @@ dfire_rna *.pdb
 # 3b58ABC.pdb -45025.865086  
 # 5e3hBC.pdb -17838.716027  
 ```
+
