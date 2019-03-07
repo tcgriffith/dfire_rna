@@ -1,4 +1,4 @@
-# in example dir
+# Run in this example dir
 
 ../bin/dfire_rna *.pdb
 
