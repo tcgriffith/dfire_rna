@@ -19,7 +19,7 @@ LDFLAGS = -Llib -fopenmp
 
 LIB = -ldl 
 
-INC = -I include -I $(ROOT_BOOST)
+INC = -I include
 
 
 $(TARGET): $(OBJ_PDB) $(OBJ_DFIRE) $(SRCDIR)/main.cc $(INCDIR)/main.h
