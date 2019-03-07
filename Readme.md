@@ -21,6 +21,8 @@ make
 or use make
 
 ```
+# This bash script writes DFIRE_RNA_HOME to the .bashrc and calls make
+# re-open terminal to get .bashrc sourced
 ./install.sh
 ```
 
