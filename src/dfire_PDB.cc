@@ -128,6 +128,8 @@ bool rna::readpdb(std::string pdbname){
         if(line.substr(0,3) == "END") break;
         if(line.substr(0,3) == "TER") continue;
         if(line.substr(0,4) != "ATOM") continue;
+    // ignore H atom
+        if(line.find("H") != std::string::npos) continue; 
 
         rn = line.substr(17,3);
         rn = misc::trim(rn);
