@@ -141,26 +141,6 @@ void print_help(char const *argv[]){
 void read_param(int argc, char const *argv[]){
 
     string projfolder = getenv("DFIRE_RNA_HOME");
-    // PARAM::dfire_folder="";
-    // boost::filesystem::path mypath = boost::dll::program_location().parent_path().parent_path();
-
-    // cout << mypath.parent_path() << endl;
-
-    // string projpath = dfire_folder + "/dfire_rna2.Rproj";
-
-
-    
-    string proj = projfolder + "/dfire_rna2.Rproj";
-
-    // boost::filesystem::path proj = boost::filesystem::path(projfolder + "/dfire_rna2.Rproj");
-
-    if (!misc::file_exists(proj)){
-        cerr << "!! dfire_rna2 root not found:"  << endl;
-
-        cerr << proj << endl;
-
-    }
-
 
     PARAM::dfire_folder = projfolder+ "/data/energyfiles";
 
