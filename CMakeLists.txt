@@ -25,4 +25,4 @@ include_directories(${CMAKE_HOME_DIRECTORY}/include)
 
 # executables
 
-add_executable(dfire_rna  ${SRCPDB} ${SRCDFIRE} ${CMAKE_SOURCE_DIR}/main.cc )
+add_executable(DFIRE_RNA  ${SRCPDB} ${SRCDFIRE} ${CMAKE_SOURCE_DIR}/main.cc )

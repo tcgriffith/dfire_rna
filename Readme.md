@@ -34,7 +34,7 @@ make
 # Usage
 
 ```
-# run dfire_rna without parameters
+# run DFIRE_RNA without parameters
 
 #######################################################
 # Calculate dfire_rna score for a pdb or a list of pdbs
@@ -54,13 +54,15 @@ Options:
 # Example
 
 ```
-cd example
-dfire_rna *.pdb
+# Run in the example dir
+
+../bin/DFIRE_RNA *.pdb
 
 # output:
 #
 # 1a9nR.pdb -10956.515269  
 # 3b58ABC.pdb -45025.865086  
 # 5e3hBC.pdb -17838.716027  
+# S_000001_000.pdb -35144.464950  
 ```
 
