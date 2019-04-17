@@ -189,7 +189,7 @@ void read_param(int argc, char const *argv[]){
 
     }
     if (PARAM::dfire_folder.length() < 3){
-        cerr << "!! dfire_rna2 root not found: " << proj  << endl;
+        cerr << "!! dfire_rna root not found: " << PARAM::dfire_folder  << endl;
     }
 }
 
