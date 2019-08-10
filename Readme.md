@@ -27,8 +27,13 @@ Use Makefile (use gcc compiler):
 
 ```
 make
-# You can manually set environment variable DFIRE_RNA_HOME to the source directory of DFIRE-RNA so the energy files can be detected, or run 
 ```
+
+
+Note: after compilation, You can manually set environment variable DFIRE_RNA_HOME to the source directory of DFIRE-RNA so the energy files can be detected, or run the following script 
+
+install.sh 
+
 
 # Usage
 
