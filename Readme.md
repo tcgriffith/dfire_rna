@@ -2,7 +2,7 @@
 
 # DFIRE-RNA
 
-Knowledge-based statistical energy based on DFIRE reference state.
+Knowledge-based statistical energy based on DFIRE reference state for RNA structure evaluation.
 
 # Install
 
@@ -21,20 +21,19 @@ make
 
 ```
 
-## Linux
+## For Linux
 
 Use Makefile (use gcc compiler):
 
 ```
 make
-# set DFIRE_RNA_HOME in .bashrc (source it or reopen the terminal)
-./install.sh
+# You can manually set environment variable DFIRE_RNA_HOME to the source directory of DFIRE-RNA so the energy files can be detected, or run 
 ```
 
 # Usage
 
 ```
-# run DFIRE_RNA without parameters
+# Help is displayed if run dfire_rna without parameters
 
 #######################################################
 # Calculate dfire_rna score for a pdb or a list of pdbs
@@ -51,7 +50,7 @@ Options:
 ```
 
 
-# Example
+# Example of usage
 
 ```
 # Run in the example dir
@@ -67,3 +66,13 @@ Options:
 
 ```
 
+
+
+
+# Citation
+
+T. Zhang, G. Hu, Y. Yang, J. Wang, and Y. Zhou, “All-atom knowledge-based potential for RNA structure discrimination based on the distance-scaled finite ideal-gas reference state.”, J. Computational Biology, in press (2019).
+
+More works related to DFIRE reference state can be found at:
+
+http://sparks-lab.org/index.php/Main/Publications
